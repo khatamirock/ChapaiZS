@@ -22,7 +22,7 @@ const App = (props) => {
   const [check, setCheck] = useState(false);
 
   return (
-    <div className="font-black bg-[#22A699] p-0 m-0  ">
+    <div className="font-black  p-0 m-0  ">
       <Navbar />
 
       <Routes>

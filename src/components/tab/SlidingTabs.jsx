@@ -14,7 +14,7 @@ const SlidingTabs = () => {
 
   return (
     <div className="text-white relative tabMain">
-      <div className="tabtitle bg-primary">
+      <div className="tabtitle bg-primary relative z-[1]">
         {tabs.map((tab, index) => (
           <Tab
             key={index}

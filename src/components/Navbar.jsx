@@ -1,29 +1,44 @@
 import { useState } from "react";
-
-import { close, logo, menu } from "../assets";
+import { Link } from "react-router-dom";
+import { close, zla_logo, menu } from "../assets";
 import { navLinks } from "../constants";
-
+import "../constants/constant.css";
+import styles from "../style";
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
-      <img src={logo} alt="hoobank" className="w-[124px] h-[32px]" />
+    <nav
+      className={`relative z-[3] bg-primary w-full p-6 flex py-6 justify-between items-center navbar`}
+    >
+      <img
+        src={zla_logo}
+        alt="SOMITIE!!"
+        className="relative z-[3] w-[111px] h-[111px]"
+      />
 
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul
+        className={`  relative z-[3] list-none sm:flex hidden justify-end items-center flex-1`}
+      >
         {navLinks.map((nav, index) => (
-          <li
-            key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
-            } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
-            onClick={() => setActive(nav.title)}
-          >
-            <a href={`#${nav.id}`}>{nav.title}</a>
-          </li>
+          <Link key={index} to={nav.id}>
+            <li
+              key={nav.id}
+              className={`font-poppins font-normal relative z-[3] nav_font cursor-pointer text-[16px] ${
+                active === nav.title ? "navSel" : "navUnSel"
+              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+              onClick={() => setActive(nav.title)}
+            >
+              <a href={`#${nav.id}`}>{nav.title}</a>
+            </li>
+          </Link>
         ))}
       </ul>
+
+      <div
+        className={`absolute top-5 left-0 ${styles.grd_cotton}  z-[2] w-full h-[90px] blur-[66px] gradNav `}
+      ></div>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <img

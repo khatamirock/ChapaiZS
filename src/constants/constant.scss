@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Permanent+Marker&family=Squada+One&display=swap");
+
+.navSel {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.under {
+  padding: 1.5px;
+  background-color: black;
+}
+.navHover {
+  &:hover {
+    background-color: cornflowerblue;
+    width: 100% !important;
+    // padding: 6px;
+    border-radius: 8px !important;
+  }
+}
+
+.smallMenu {
+  background-color: #fca412;
+  padding: 4px;
+  border-radius: 7px;
+}
+.nav_font {
+  // font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+}
+
+.navSel {
+  color: black;
+}
+
+.navUnSel {
+  color: rgb(122, 122, 122);
+}
+.test {
+  background-color: red !important;
+}

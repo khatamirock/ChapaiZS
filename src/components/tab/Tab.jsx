@@ -12,7 +12,7 @@ const Tab = ({ label, active, onClick }) => {
     <m.div
       // add scale anim
       animate={{ scale: active ? 1.1 : 1 }}
-      className="tabName"
+      className="tabName relative z-[4]"
       style={tabStyles}
       onClick={onClick}
     >
