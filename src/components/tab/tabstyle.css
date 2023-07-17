@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Permanent+Marker&family=Squada+One&display=swap");
+* {
+  padding: 0;
+}
+
+.tb {
+  background-color: red;
+  padding: 20px;
+}
+
+.tabMain {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.tabMain .tabheader {
+  display: flex;
+  justify-content: center;
+}
+.tabMain .tabtitle {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.tabMain .tabtitle .tabName {
+  border-radius: 30px;
+  margin: 10px;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+}
+.tabMain .containerMem {
+  display: grid;
+}
+
+.tabcontent {
+  margin-left: 0 !important;
+}
+
+.eachMem {
+  display: flex;
+  align-items: center;
+  color: white;
+  border-color: black !important;
+  border-style: solid !important;
+  background-color: rgba(33, 42, 62, 0.968627451) !important;
+  border-radius: 10px;
+}
+.eachMem .mem_name {
+  font-size: 21px;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
+.eachMem .mem_info {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+}
+.eachMem .mem_info p {
+  font-size: 14px;
+  color: wheat;
+}
+.eachMem .Addr {
+  text-align: center;
+}
+
+.tab2_img {
+  width: 120px;
+}
+.tab2_img img {
+  padding: 9px;
+  margin: 0 0px;
+  border-radius: 18px !important;
+}/*# sourceMappingURL=tabstyle.css.map */

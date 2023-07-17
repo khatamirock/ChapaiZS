@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Permanent+Marker&family=Squada+One&display=swap");
+
+* {
+  padding: 0;
+}
+
+.tb {
+  background-color: red;
+  padding: 20px;
+}
+.tabMain {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .tabheader {
+    display: flex;
+    justify-content: center;
+  }
+
+  .tabtitle {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    // border-radius: 40px;
+    .tabName {
+      border-radius: 30px;
+      margin: 10px;
+      -webkit-text-stroke: 1px black;
+      -webkit-text-fill-color: white;
+    }
+  }
+  .containerMem {
+    // margin: 0 134px;
+    display: grid;
+    // margin: 0 45px;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // background-color: yellow;
+  }
+}
+.tabcontent {
+  margin-left: 0 !important;
+  // color: black !important;
+  // margin-left: 0;
+  // margin-right: 0 ;
+  // background-color: #164b60 !important;
+}
+.eachMem {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  color: white;
+  border-color: black !important;
+  border-style: solid !important;
+
+  background-color: #212a3ef7 !important;
+  // margin: 4px;
+  border-radius: 10px;
+  // margin: 30px;
+  .mem_name {
+    // background-color: #7f99a9;
+    font-size: 21px;
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+  }
+  .mem_info {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    p {
+      font-size: 14px;
+      color: wheat;
+    }
+  }
+  .Addr {
+    text-align: center;
+  }
+}
+.tab2_img {
+  img {
+    padding: 9px;
+    margin: 0 0px;
+    border-radius: 18px !important;
+  }
+  width: 120px;
+  // height: 120px;
+}
