@@ -49,15 +49,16 @@ const Usersinfo = () => {
             <h1 className="series">
               {user.Department} -{user.Series - 2000}
             </h1>
+            <div className="addr">
+              <h3>{user.PermAddress}</h3>
+            </div>
           </div>
         </div>
         <div className="devider"></div>
 
         <div className="about">
           <h1 className="about_h1">ABOUT..</h1>
-          <div className="addr">
-            <h3>{user.PermAddress}</h3>
-          </div>
+
           <div className="email">
             <h3>{user.Email}</h3>
           </div>
