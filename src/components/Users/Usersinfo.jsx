@@ -37,29 +37,36 @@ const Usersinfo = () => {
   }, []);
 
   return (
-    <div className="MianDiv h-[100vh] bg-primary">
+    <div className="MianDiv h-[100vh] bg-primary sm:p-20 p-6 pt-10">
       {/* <div className="back">{"<<"}</div> */}
-      <div className="user_card w-[70%] relative">
-        <div className="img">
-          <img src={photo} alt="" srcset="" />
+      <div className="wrapper">
+        <div className="imgName flex">
+          <div className="img sm:w-[20%] w-[100px]">
+            <img src={photo} alt="" srcset="" />
+          </div>
+          <div className="Id_name">
+            <h1 className="name">{user.Name}</h1>
+            <h1 className="series">
+              {user.Department} -{user.Series - 2000}
+            </h1>
+          </div>
         </div>
-        <div className="Id_name">
-          <h1 className="name">{user.Name}</h1>
-          <h1 className="series">
-            {user.Department} -{user.Series - 2000}
-          </h1>
-        </div>
-        <div className="addr">
-          <h3>{user.PermAddress}</h3>
-        </div>
-        <div className="email">
-          <h3>{user.Email}</h3>
-        </div>
-        <div className="currJob">
-          <h3>{user.Job}</h3>
-        </div>
-        <div className="bloodGrp">
-          <h1>{`${user.Blood_Group}`}</h1>
+        <div className="devider"></div>
+
+        <div className="about">
+          <h1 className="about_h1">ABOUT..</h1>
+          <div className="addr">
+            <h3>{user.PermAddress}</h3>
+          </div>
+          <div className="email">
+            <h3>{user.Email}</h3>
+          </div>
+          <div className="currJob">
+            <h3>{user.Job}</h3>
+          </div>
+          <div className="bloodGrp">
+            <h1>{`${user.Blood_Group}`}</h1>
+          </div>
         </div>
       </div>
     </div>

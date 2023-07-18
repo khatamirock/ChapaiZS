@@ -1,3 +1,36 @@
 * {
   padding: 0;
 }
+
+.MianDiv {
+  .wrapper {
+    color: white;
+    .img {
+      // margin: 10px 0;
+      // margin-right: 50px;
+      img {
+        border-radius: 10px;
+      }
+    }
+    background-color: #3c4961;
+    padding: 20px;
+    border-radius: 10px;
+    .Id_name {
+      margin-left: 19px;
+      .series {
+        font-size: 10px;
+        color: #b1b1b1;
+      }
+    }
+    .devider {
+      margin: 20px 0;
+      width: 90%;
+      height: 1.8px;
+      border-radius: 10px;
+      background-color: wheat;
+    }
+    .about_h1 {
+      font-size: 11px;
+    }
+  }
+}

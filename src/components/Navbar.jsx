@@ -40,7 +40,7 @@ const Navbar = () => {
         className={`absolute top-5 left-0 ${styles.grd_cotton}  z-[2] w-full h-[90px] blur-[66px] gradNav `}
       ></div>
 
-      <div className="sm:hidden flex flex-1 justify-end items-center">
+      <div className="relative z-[4] sm:hidden flex flex-1 justify-end items-center">
         <img
           src={toggle ? close : menu}
           alt="menu"

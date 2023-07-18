@@ -102,14 +102,19 @@ export const navLinks = [
 
 export const tabs = [
   {
-    label: "ALl Members",
+    label: "ALL Members",
     title: <Tab1 />,
 
     info: "Info text for Tab 1",
   },
   {
-    label: "Commetee",
+    label: "Committe",
     title: <Tab2 />,
+    info: "Info text for Tab 2",
+  },
+  {
+    label: "Teachers",
+    title: <Tab1 />,
     info: "Info text for Tab 2",
   },
 ];

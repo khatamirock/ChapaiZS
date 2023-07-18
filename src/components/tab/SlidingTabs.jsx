@@ -31,7 +31,7 @@ const SlidingTabs = () => {
           key={activeTab} // Add key prop for smooth transition
           initial={{ opacity: 0, x: prevTab > activeTab ? -40 : 20 }}
           animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: prevTab < activeTab ? 10 : -30 }}
+          exit={{ opacity: 0, x: prevTab < activeTab ? 20 : -40 }}
           transition={{ duration: 0.3 }}
           style={{ position: "absolute", top: "100%" }}
         >

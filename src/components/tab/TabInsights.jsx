@@ -41,7 +41,9 @@ const Tab1 = () => {
   return (
     <div className="containerMem grid-cols-1  sm:ml-[20%] sm:mr-[20%] ml-4 mr-4">
       {Zillasom.map((mem, idx) => {
-        return simple(mem, idx, null, null);
+        return (
+          <Link to={`/user/${idx + 1}`}>{simple(mem, idx, null, null)}</Link>
+        );
       })}
     </div>
   );
