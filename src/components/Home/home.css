@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+}
+
+.Main .abt_p {
+  font-weight: initial;
+}
+.Main .title {
+  font-size: 33px;
+  letter-spacing: 2px;
+  font-family: "Bebas Neue", sans-serif;
+  color: red;
+}
+.Main .hero {
+  align-items: center;
+  justify-content: space-around;
+}
+.Main .hero .hero_img {
+  width: 80%;
+}
+.Main .hero .hero_text span {
+  color: red;
+}
+.Main .hero .hero_text .welcome {
+  font-weight: bolder;
+  font-size: 28px;
+}
+.Main .hero .hero_text .hero_para {
+  font-weight: initial;
+}
+.Main .about_us {
+  margin-top: 100px;
+  margin-right: 20px;
+  align-items: center;
+}
+.Main .about_us .ab_carousel {
+  padding: 10px;
+}
+.Main .about_us .imgdiv {
+  position: relative;
+}
+.Main .about_us .imgdiv .grd {
+  background-color: red;
+  width: 330px;
+  height: 420px;
+  position: absolute;
+  top: -30px;
+  transform: rotate(30deg);
+  border-radius: 40px;
+}
+.Main .about_us .imgdiv .slash {
+  position: absolute;
+  top: -102px;
+  z-index: 4;
+  transform: rotate(-70deg);
+  width: 30%;
+}
+.Main .about_us .imgdiv .star {
+  position: absolute;
+  z-index: 1;
+  bottom: -166px;
+  width: 30%;
+  right: -10px;
+}
+.Main .events_actvty {
+  margin-top: 110px;
+  align-items: center;
+}
+.Main .events_actvty .event_img {
+  position: relative;
+}
+.Main .events_actvty .event_img .decor {
+  top: -67px;
+  left: 0;
+  width: 312px;
+  z-index: -2;
+  height: 142%;
+}
+.Main .contact_us {
+  align-items: center;
+}
+
+.footer {
+  background: #2f83c0;
+}/*# sourceMappingURL=home.css.map */

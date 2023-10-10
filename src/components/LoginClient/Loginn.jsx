@@ -38,48 +38,60 @@ const Loginn = () => {
   };
 
   return (
-    <div className="lgn_container p-4 ml-4 mr-4">
-      {isLoading && <div>data is loading</div>}
-      {/* {! isLoading &&  */}
-
-      <h1>Login</h1>
-      <div className="form">
-        <div>
-          <input
-            onChange={(e) => {
-              setName(e.target.value);
-              console.log(name);
+    <div className="lgn_container h-[80vh] bg-primary flex pl-4 pr-4  ">
+      <div className="imageDiv sm:block  display-none">
+        <div className="logIntro"></div>
+        <h1>
+          Lets <span>Login</span> to Join the <span>Thread!!</span>
+        </h1>
+        {/* <img
+          src="https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW4lMjBzY3JlZW58ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=400&q=60"
+          alt=""
+          srcset=""
+        /> */}
+      </div>
+      <div className="loginDiv">
+        <h1>Login</h1>
+        <div className="form">
+          <div>
+            <input
+              className="log_email"
+              onChange={(e) => {
+                setName(e.target.value);
+                console.log(name);
+              }}
+              type="text"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div>
+            <input
+              className="log_pass"
+              onChange={(e) => {
+                setPass(e.target.value);
+                console.log(pass);
+              }}
+              type="text"
+              placeholder="Enter your password"
+            />
+          </div>
+          <button
+            onClick={(e) => {
+              makeDecision(e);
             }}
-            type="text"
-            placeholder="Enter your email"
-          />
-        </div>
-        <div>
-          <input
-            onChange={(e) => {
-              setPass(e.target.value);
-              console.log(pass);
+            className="lgn_btn"
+          >
+            Login
+          </button>
+          <button
+            onClick={(e) => {
+              signInWithEmail();
             }}
-            type="text"
-            placeholder="Enter your password"
-          />
+            className="lgn_btn"
+          >
+            sendAuth2
+          </button>
         </div>
-        <button
-          onClick={(e) => {
-            makeDecision(e);
-          }}
-          className="lgn_btn"
-        >
-          Login
-        </button>
-        <button
-          onClick={(e) => {
-            signInWithEmail();
-          }}
-          className="lgn_btn"
-        >
-          sendAuth2
-        </button>
       </div>
     </div>
   );

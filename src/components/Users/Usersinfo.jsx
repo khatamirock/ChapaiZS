@@ -10,15 +10,6 @@ const Usersinfo = () => {
   const [photo, setPhto] = useState();
   useEffect(() => {
     const fetchUser = async (e) => {
-      // const { data, error } = await supabase
-      //   .from("member")
-      //   .select() //or whatever u want////
-      //   .eq("ID", id);
-      // console.log("checking!!!");
-      // if (error) {
-      //   console.log(error);
-      // }
-
       const storedData = JSON.parse(localStorage.getItem("member"))[id - 1];
 
       console.log(JSON.parse(localStorage.getItem("member"))[1]);
@@ -32,6 +23,8 @@ const Usersinfo = () => {
       }
       // e.preventDefault;
     };
+
+    window.scrollTo(0, 0);
 
     fetchUser();
   }, []);

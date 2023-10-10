@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+}
+
+.Srcwrapper {
+  position: fixed;
+  top: 0 !important;
+  z-index: 4 !important;
+  width: 100%;
+  background-color: rgba(118, 118, 118, 0.527);
+  padding: 100px;
+  height: 100%;
+}
+.Srcwrapper .srchbar {
+  left: 50%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  top: 20px;
+  background-color: rgba(33, 42, 62, 0.968627451) !important;
+  position: fixed; /* Change 'sticky' to 'fixed' */
+  z-index: 3;
+  padding: 10px;
+}
+.Srcwrapper .srchbar .input_online {
+  background-color: #d2cdfb;
+  color: black;
+  border-radius: 6px;
+  border: solid black;
+}
+.Srcwrapper .srchbar button {
+  color: wheat;
+}
+.Srcwrapper .srchbar .result {
+  overflow-y: auto;
+  max-height: 50vh; /* Set a maximum height or fixed height */
+}
+.Srcwrapper:hover .srchbar {
+  display: block;
+}/*# sourceMappingURL=searchbar.css.map */

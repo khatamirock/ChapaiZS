@@ -1,4 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Permanent+Marker&family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Permanent+Marker&family=Rubik:wght@400;500&family=Squada+One&family=Ubuntu&display=swap");
 * {
   padding: 0;
+}
+
+.hoverSeach {
+  padding: 30px;
+  background-color: red;
+  height: 10px !important;
+  width: 10px !important;
+  width: 30px;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hoverSeach:hover {
+  background-color: yellow;
 }/*# sourceMappingURL=app.css.map */

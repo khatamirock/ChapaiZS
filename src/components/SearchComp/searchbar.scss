@@ -1,0 +1,47 @@
+* {
+  padding: 0;
+}
+
+.Srcwrapper {
+  position: fixed;
+  top: 0 !important;
+  z-index: 4 !important;
+  width: 100%;
+  // position: absolute;
+  background-color: rgba(118, 118, 118, 0.527);
+  padding: 100px;
+  height: 100%;
+
+  .srchbar {
+    // Center the search bar horizontally
+    left: 50%;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    // Position it at the top of the screen
+    top: 20px;
+    // Other styles
+
+    background-color: #212a3ef7 !important;
+    position: fixed; /* Change 'sticky' to 'fixed' */
+    z-index: 3;
+    padding: 10px;
+    .input_online {
+      background-color: #d2cdfb;
+      color: black;
+      border-radius: 6px;
+      border: solid black;
+    }
+    button {
+      color: wheat;
+    }
+    .result {
+      overflow-y: auto;
+      max-height: 50vh; /* Set a maximum height or fixed height */
+    }
+  }
+
+  // Show the search bar on hover
+  &:hover .srchbar {
+    display: block;
+  }
+}

@@ -7,3 +7,48 @@
   margin: 4px 10px;
   border-radius: 10px;
 }
+.lgn_container {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  .imageDiv {
+    display: flex;
+    align-items: center;
+    background-color: #212a3ef7 !important;
+    padding: 100px;
+
+    color: wheat;
+    width: 40%;
+    height: 70vh;
+    border-radius: 10px;
+    h1 {
+      font-size: 22px;
+      span {
+        font-size: 27px;
+        color: red;
+      }
+    }
+  }
+  .loginDiv {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+.log_email {
+  padding: 10px;
+  background-color: #212a3ef7 !important;
+  color: wheat;
+  border-radius: 10px;
+  border: solid black;
+  margin-bottom: 7px;
+}
+.log_pass {
+  padding: 10px;
+  background-color: #212a3ef7 !important;
+  color: wheat;
+  border-radius: 10px;
+  border: solid black;
+}

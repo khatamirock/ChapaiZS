@@ -27,6 +27,8 @@
 
 .navSel {
   color: black;
+  background-color: rgb(25, 137, 249);
+  border-radius: 10px;
 }
 
 .navUnSel {
@@ -35,4 +37,39 @@
 
 .test {
   background-color: red !important;
+}
+
+.navItems {
+  padding: 7px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.navItems:hover {
+  background-color: rgb(58, 157, 255);
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.slideNavBar {
+  top: 0;
+  position: fixed;
+  width: 35%;
+  background-color: #81a9ff;
+  padding: 40px !important;
+  height: 100vh;
+  right: 0;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+}
+.slideNavBar li {
+  margin: 10px;
+}
+.slideNavBar .SlidenavItems {
+  padding: 16px;
+  padding-right: 15%;
+  width: 180%;
+}
+.slideNavBar .navSel {
+  border: solid 2px black;
 }/*# sourceMappingURL=constant.css.map */

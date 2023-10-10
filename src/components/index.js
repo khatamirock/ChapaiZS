@@ -7,6 +7,8 @@ import SlidingTabs from "./tab/SlidingTabs";
 import Loginn from "./LoginClient/Loginn";
 import Usersinfo from "./Users/Usersinfo";
 import SignUpuser from "./Users/SignUpuser";
+import SearchTest from "../tester/SearchTest";
+import Home_section from "./Home/Home_section";
 export {
   Navbar,
   Members,
@@ -15,4 +17,6 @@ export {
   Loginn,
   Usersinfo,
   SignUpuser,
+  SearchTest,
+  Home_section,
 };

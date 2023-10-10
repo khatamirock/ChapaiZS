@@ -1,9 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Tab from "./Tab";
 import "./tabstyle.css";
 import { tabs } from "../../constants";
 const SlidingTabs = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      const topOffset = 100; // Adjust this value based on your needs
+      const isOnTop = window.scrollY >= topOffset;
+      setIsSticky(isOnTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [activeTab, setActiveTab] = useState(0);
   const [prevTab, setActiveTab2] = useState(0);
 
@@ -14,7 +29,12 @@ const SlidingTabs = () => {
 
   return (
     <div className="text-white relative tabMain">
-      <div className="tabtitle bg-primary relative z-[1]">
+      <div
+        className={`tabtitle bg-primary z-[1] 
+      ${isSticky ? "stickOnTop" : ""}
+      `}
+      >
+        {/* change the color later!! */}
         {tabs.map((tab, index) => (
           <Tab
             key={index}
@@ -39,6 +59,7 @@ const SlidingTabs = () => {
             <div>
               {tabs[activeTab].title}
               {/* {tabs[activeTab].info} */}
+              <div className="goToTop"></div>
             </div>
           }
         </motion.div>

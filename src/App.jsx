@@ -6,9 +6,12 @@ import {
   Loginn,
   Usersinfo,
   SignUpuser,
+  SearchTest,
+  Home_section,
 } from "./components";
 import React, { useState } from "react";
-
+import "./app.css";
+import SearchBar from "./components/SearchComp/SearchBar";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,19 +23,32 @@ import * as ReactDOM from "react-dom";
 
 const App = (props) => {
   const [check, setCheck] = useState(false);
+  const [SearchBa, SetSearchBar] = useState(false);
 
   return (
     <div className="font-black  p-0 m-0  ">
       <Navbar />
-
+      {SearchBa && (
+        <SearchBar searchBarState={SearchBa} setSearchBarState={SetSearchBar} />
+      )}
       <Routes>
-        <Route path="/" element={<SlidingTabs />} />
-        {/* <Route path="/members" element={<UserInfo />} /> */}
+        <Route path="/" element={<Home_section />} />
+        {/* <Route path="/" element={<SearchTest />} /> */}
+        <Route path="/members" element={<SlidingTabs />} />
+
         <Route path="/login" element={<Loginn />} />
         <Route path="/member" element={<Eachuser />} />
         <Route path="/signup" element={<SignUpuser />} />
         <Route path="/user/:id" element={<Usersinfo />} />
       </Routes>
+      <button
+        className="hoverSeach z-[5]"
+        onClick={() => {
+          SetSearchBar(!SearchBa);
+        }}
+      >
+        <div className="lgo">Srch</div>
+      </button>
     </div>
   );
 };

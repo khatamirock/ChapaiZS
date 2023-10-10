@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+}
+.Main {
+  .abt_p {
+    font-weight: initial;
+  }
+  .title {
+    font-size: 33px;
+    letter-spacing: 2px;
+    font-family: "Bebas Neue", sans-serif;
+    color: red;
+  }
+
+  .hero {
+    align-items: center;
+    justify-content: space-around;
+
+    .hero_img {
+      width: 80%;
+    }
+    .hero_text {
+      // max-width: 40%;
+      span {
+        color: red;
+      }
+      .welcome {
+        font-weight: bolder;
+        font-size: 28px;
+      }
+      .hero_para {
+        font-weight: initial;
+      }
+    }
+  }
+  .about_us {
+    margin-top: 100px;
+    margin-right: 20px;
+    align-items: center;
+
+    // grid-template-columns: 1fr 2fr;
+    .ab_carousel {
+      padding: 10px;
+    }
+    .imgdiv {
+      position: relative;
+
+      .grd {
+        background-color: red;
+        width: 330px;
+        height: 420px;
+        position: absolute;
+        top: -30px;
+        transform: rotate(30deg);
+        border-radius: 40px;
+      }
+      .slash {
+        position: absolute;
+        top: -102px;
+        z-index: 4;
+        transform: rotate(-70deg);
+        width: 30%;
+      }
+      .star {
+        position: absolute;
+
+        z-index: 1;
+        bottom: -166px;
+        width: 30%;
+        right: -10px;
+      }
+    }
+  }
+  .events_actvty {
+    margin-top: 110px;
+    align-items: center;
+    .event_img {
+      position: relative;
+
+      .decor {
+        top: -67px;
+        left: 0;
+        width: 312px;
+        z-index: -2;
+        height: 142%;
+      }
+    }
+  }
+
+  .contact_us {
+    align-items: center;
+  }
+}
+
+.footer {
+  background: #2f83c0;
+}
