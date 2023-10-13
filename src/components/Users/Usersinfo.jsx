@@ -3,22 +3,25 @@ import { useParams } from "react-router-dom";
 import supabase from "../supabaseHander/GetTestdat";
 
 import "./SignUpuser.css";
+
 const Usersinfo = () => {
   const [user, setUser] = useState("Loadng......");
   const { id } = useParams();
+
   const base_drive = "https://drive.google.com/uc?export=view&id=";
+
   const [photo, setPhto] = useState();
   useEffect(() => {
     const fetchUser = async (e) => {
       const storedData = JSON.parse(localStorage.getItem("member"))[id - 1];
-
-      console.log(JSON.parse(localStorage.getItem("member"))[1]);
+      console.log(storedData);
+      console.log(JSON.parse(localStorage.getItem("member"))[id - 1]);
       setUser(storedData);
       var phto = storedData.Photo;
       if (phto != null) {
         const id = phto.split("id=")[1];
 
-        console.log(base_drive + id);
+        // console.log(base_drive + id);
         setPhto(base_drive + id);
       }
       // e.preventDefault;

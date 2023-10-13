@@ -62,9 +62,18 @@ const SearchTest = () => {
 };
 export const SearchTest3 = ({ Series }) => {
   const searchData = Zillasom;
-
+  if (Series === null) {
+    return null; // or handle the null value appropriately
+  }
   const filteredData = searchData.filter((item) => {
-    const seriesMatch = item.Series.toString().includes(Series);
+    let seriesMatch = false;
+
+    try {
+      seriesMatch = item.Series.toString().includes(Series);
+    } catch (error) {
+      // Handle the exception (e.g., log an error, provide a default value, etc.)
+      console.error("An error occurred while processing Series:", error);
+    }
 
     return seriesMatch;
   });

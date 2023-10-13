@@ -36,6 +36,7 @@
 
 .eachMem {
   display: flex;
+  justify-content: center;
   align-items: center;
   color: white;
   border-color: black !important;
@@ -44,7 +45,10 @@
   border-radius: 10px;
 }
 .eachMem .mem_name {
-  font-size: 21px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  font-size: 24px;
+  color: #9fbeff;
   padding-bottom: 20px;
   letter-spacing: 2px;
   word-spacing: 5px;
@@ -52,15 +56,30 @@
 .eachMem .mem_info {
   padding: 18px;
   display: flex;
+  margin-top: 20px;
   flex-direction: column;
+  justify-content: center;
   align-items: center !important;
 }
 .eachMem .mem_info p {
   font-size: 14px;
   color: wheat;
 }
+.eachMem .mem_info .from_addr {
+  font-size: 13px;
+  margin-bottom: 6px;
+  font-family: "Rubik", sans-serif;
+}
 .eachMem .Addr {
   text-align: center;
+}
+.eachMem .blood_grp {
+  background: #95caff;
+  color: black;
+  padding: 10px;
+  overflow: hidden;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .tab2_img {

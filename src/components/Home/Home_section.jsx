@@ -78,12 +78,26 @@ const Home_section = () => {
         <div className="contact_us pt-[90px] grid grid-cols-1 sm:grid-cols-2 ">
           <div className="text">
             <h1 className="title">Contact Us</h1>
-            <p className="abt_p">
+            <p className="abt_p sm:p-2 m-10">
               Have questions or want to reach out? We'd love to hear from you.
               Feel free to contact us through the provided channels. We're
               always here to chat, plan, and spread the joy of friendship and
               goodness.
             </p>
+            <div className="callAction">
+              <div className="phone flex">
+                <div className="txt_phone p-3">Cell1</div>
+                <h3 className="phone_no p-3">017_____________</h3>
+              </div>
+              <div className="phone mt-2 flex">
+                <div className="txt_phone p-3">Cell2</div>
+                <h3 className="phone_no p-3">017_____________</h3>
+              </div>
+              <div className="phone mt-2 flex">
+                <div className="txt_phone p-3">Cell3</div>
+                <h3 className="phone_no p-3">017_____________</h3>
+              </div>
+            </div>
           </div>
 
           <div className="img">
@@ -94,11 +108,12 @@ const Home_section = () => {
       <div className="footer  w-full">
         <div className="logo">
           <img
-            className="w-[90px] pt-10 pb-10 pl-4 pr-4"
+            className="zlalogo w-[90px] pt-10 pb-10 pl-4 pr-4"
             src={zla_logo}
             alt=""
             srcset=""
           />
+          <div className="follow"></div>
         </div>
       </div>
     </div>

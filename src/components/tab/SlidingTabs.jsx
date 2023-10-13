@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Tab from "./Tab";
 import "./tabstyle.css";
 import { tabs } from "../../constants";
+
 const SlidingTabs = () => {
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {

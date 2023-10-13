@@ -1,4 +1,6 @@
 import styles from "./style";
+import { FaSearch } from "react-icons/fa";
+
 import {
   Navbar,
   SlidingTabs,
@@ -8,6 +10,7 @@ import {
   SignUpuser,
   SearchTest,
   Home_section,
+  About,
 } from "./components";
 import React, { useState } from "react";
 import "./app.css";
@@ -39,6 +42,7 @@ const App = (props) => {
         <Route path="/login" element={<Loginn />} />
         <Route path="/member" element={<Eachuser />} />
         <Route path="/signup" element={<SignUpuser />} />
+        <Route path="/about" element={<About />} />
         <Route path="/user/:id" element={<Usersinfo />} />
       </Routes>
       <button
@@ -47,7 +51,9 @@ const App = (props) => {
           SetSearchBar(!SearchBa);
         }}
       >
-        <div className="lgo">Srch</div>
+        <div className="lgo">
+          <FaSearch />
+        </div>
       </button>
     </div>
   );

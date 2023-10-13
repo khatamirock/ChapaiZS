@@ -9,6 +9,7 @@ import Usersinfo from "./Users/Usersinfo";
 import SignUpuser from "./Users/SignUpuser";
 import SearchTest from "../tester/SearchTest";
 import Home_section from "./Home/Home_section";
+import About from "./about_dev/About";
 export {
   Navbar,
   Members,
@@ -19,4 +20,5 @@ export {
   SignUpuser,
   SearchTest,
   Home_section,
+  About,
 };

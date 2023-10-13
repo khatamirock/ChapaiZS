@@ -79,7 +79,25 @@
 .Main .contact_us {
   align-items: center;
 }
+.Main .contact_us .callAction .phone {
+  display: flex;
+}
+.Main .contact_us .callAction .phone .txt_phone {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: red;
+}
+.Main .contact_us .callAction .phone .phone_no {
+  background-color: cadetblue;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
 .footer {
-  background: #2f83c0;
+  background: #1989f9;
+}
+.footer .zlalogo {
+  width: 20%;
+  height: 74%;
+  padding: 3px;
 }/*# sourceMappingURL=home.css.map */

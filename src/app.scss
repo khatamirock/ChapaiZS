@@ -5,7 +5,8 @@
 }
 .hoverSeach {
   padding: 30px;
-  background-color: red;
+  background-color: #1989f9;
+  border-radius: 12px;
   height: 10px !important;
   width: 10px !important;
   width: 30px;
@@ -16,9 +17,12 @@
   align-items: center;
   justify-content: center;
   &:hover {
-    background-color: yellow;
+    background-color: rgb(99, 99, 85);
   }
   // .lgo {
   //   padding: 1px;
   // }
+}
+.about_main {
+  background-color: red;
 }

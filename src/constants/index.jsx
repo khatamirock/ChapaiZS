@@ -16,6 +16,10 @@ export const navLinks = [
     id: "signup",
     title: "Sing-Up",
   },
+  {
+    id: "about",
+    title: "About",
+  },
 ];
 
 // export const footerLinks = [
@@ -91,14 +95,14 @@ export const tabs = [
 
     info: "Info text for Tab 1",
   },
-  {
-    label: "Committe",
-    title: <Tab2 />,
-    info: "Info text for Tab 2",
-  },
-  {
-    label: "Teachers",
-    title: <Tab1 />,
-    info: "Info text for Tab 2",
-  },
+  //   {
+  //     label: "Committe",
+  //     title: <Tab2 />,
+  //     info: "Info text for Tab 2",
+  //   },
+  //   {
+  //     label: "Teachers",
+  //     title: <Tab1 />,
+  //     info: "Info text for Tab 2",
+  //   },
 ];
