@@ -50,7 +50,19 @@ p {
     padding: 7px;
   }
 }
-
+.links {
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #a5a1c2;
+  a {
+    border-radius: 5px;
+    background-color: #2a292f;
+    padding: 10px;
+  }
+}
 button.primary {
   background-color: #03bfcb;
   border: 1px solid #03bfcb;

@@ -1,0 +1,14 @@
+/* Add your CSS styles for the confirmation window component */
+.confirmation-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.confirmation-window.visible {
+  display: block;
+}/*# sourceMappingURL=info_edit.css.map */
