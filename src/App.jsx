@@ -1,6 +1,7 @@
 import styles from "./style";
 import { FaSearch } from "react-icons/fa";
-
+import { useNavigate } from "react-router-dom";
+import { MyContextProvider } from "./components/contexts/Context";
 import {
   Navbar,
   SlidingTabs,
@@ -28,34 +29,52 @@ const App = (props) => {
   const [check, setCheck] = useState(false);
   const [SearchBa, SetSearchBar] = useState(false);
 
-  return (
-    <div className="font-black  p-0 m-0  ">
-      <Navbar />
-      {SearchBa && (
-        <SearchBar searchBarState={SearchBa} setSearchBarState={SetSearchBar} />
-      )}
-      <Routes>
-        <Route path="/" element={<Home_section />} />
-        {/* <Route path="/" element={<SearchTest />} /> */}
-        <Route path="/members" element={<SlidingTabs />} />
+  const [clickedOnSrch, setclickedOnSrch] = useState(55);
 
-        <Route path="/login" element={<Loginn />} />
-        <Route path="/member" element={<Eachuser />} />
-        <Route path="/signup" element={<SignUpuser />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/user/:id" element={<Usersinfo />} />
-      </Routes>
-      <button
-        className="hoverSeach z-[5]"
-        onClick={() => {
-          SetSearchBar(!SearchBa);
-        }}
-      >
-        <div className="lgo">
-          <FaSearch />
-        </div>
-      </button>
-    </div>
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/members", { state: { clickedOnSrch: clickedOnSrch } });
+  };
+
+  return (
+    <MyContextProvider>
+      <div className="font-black  p-0 m-0  ">
+        <Navbar />
+        {SearchBa && (
+          <SearchBar
+            searchBarState={SearchBa}
+            setSearchBarState={SetSearchBar}
+            setSelected={setclickedOnSrch}
+            currentSelect={clickedOnSrch}
+          />
+        )}
+        <Routes>
+          <Route path="/" element={<Home_section />} />
+          {/* <Route path="/" element={<SearchTest />} /> */}
+          <Route
+            path="/members"
+            element={<SlidingTabs highlightUser={clickedOnSrch} />}
+          />
+
+          <Route path="/login" element={<Loginn />} />
+          <Route path="/member" element={<Eachuser />} />
+          <Route path="/signup" element={<SignUpuser />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/user/:id" element={<Usersinfo />} />
+        </Routes>
+        <button
+          className="hoverSeach z-[5]"
+          onClick={() => {
+            SetSearchBar(!SearchBa);
+          }}
+        >
+          <div className="lgo">
+            <FaSearch />
+          </div>
+        </button>
+      </div>
+    </MyContextProvider>
   );
 };
 

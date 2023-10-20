@@ -105,6 +105,7 @@ const Home_section = () => {
           </div>
         </div>
       </div>
+
       <div className="footer  w-full">
         <div className="logo">
           <img
@@ -113,8 +114,22 @@ const Home_section = () => {
             alt=""
             srcset=""
           />
-          <div className="follow"></div>
+          <div className="logoTx">Togather we Stand</div>
         </div>
+        <div className="right">
+          <div className="copyrt p-[40px]">
+            © 2023 <span>ChapaiNawabganj Zilla Samiti</span>. All rights
+            reserved, including digital assets and logos owned by the
+            organization.
+          </div>
+          <div className="social">
+            <div className="fac"></div>
+            <div className="email"></div>
+          </div>
+        </div>
+      </div>
+      <div className="by_me">
+        <h2>Developed | Designed | Maintained with Care ❤️ by Md. Khatami</h2>
       </div>
     </div>
   );

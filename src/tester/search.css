@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+}
+
+.searched_date {
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.searched_date:hover {
+  background-color: #485166;
+}
+
+.srchbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_online {
+  width: 100%;
+}/*# sourceMappingURL=search.css.map */

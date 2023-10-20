@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Dosis&family=Flow+Rounded&family=Pacifico&family=Permanent+Marker&family=Rubik:wght@400;500&family=Squada+One&family=Ubuntu&display=swap");
 * {
   padding: 0;
 }
@@ -85,7 +86,7 @@
 .Main .contact_us .callAction .phone .txt_phone {
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
-  background-color: red;
+  background-color: #0c0d21;
 }
 .Main .contact_us .callAction .phone .phone_no {
   background-color: cadetblue;
@@ -94,10 +95,50 @@
 }
 
 .footer {
-  background: #1989f9;
+  display: flex;
+  padding: 14px;
+  flex-direction: row;
+  align-items: center;
+  background: #0c0d21;
 }
-.footer .zlalogo {
-  width: 20%;
-  height: 74%;
+.footer .logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+.footer .logo .zlalogo {
+  width: 33%;
   padding: 3px;
+}
+.footer .logo .logoTx {
+  font-family: "Permanent Marker", cursive;
+  transform: rotate(-14deg);
+  bottom: 10px;
+  color: white;
+  position: absolute;
+  right: -20px;
+  color: #b5baff;
+}
+.footer .copyrt {
+  color: white;
+  font-family: monospace;
+}
+.footer .copyrt span {
+  font-weight: bold;
+}
+
+.by_me {
+  background: #0c0d21;
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+.by_me h2 {
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: #171728;
+  font-family: monospace;
 }/*# sourceMappingURL=home.css.map */

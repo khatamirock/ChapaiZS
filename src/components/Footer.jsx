@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="flex-[1] flex flex-col justify-start mr-10">
         <img
           src={logo}
-          alt="hoobank"
+          alt="chapaiNwabganj"
           className="w-[266px] h-[72.14px] object-contain"
         />
         <p className={`${styles.paragraph} mt-4 max-w-[312px]`}>
@@ -18,7 +18,10 @@ const Footer = () => (
 
       <div className="flex-[1.5] w-full flex flex-row justify-between flex-wrap md:mt-0 mt-10">
         {footerLinks.map((footerlink) => (
-          <div key={footerlink.title} className={`flex flex-col ss:my-0 my-4 min-w-[150px]`}>
+          <div
+            key={footerlink.title}
+            className={`flex flex-col ss:my-0 my-4 min-w-[150px]`}
+          >
             <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
               {footerlink.title}
             </h4>

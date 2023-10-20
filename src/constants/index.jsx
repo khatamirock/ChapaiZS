@@ -16,10 +16,11 @@ export const navLinks = [
     id: "signup",
     title: "Sing-Up",
   },
-  {
-    id: "about",
-    title: "About",
-  },
+
+  // {
+  //   id: "about",
+  //   title: "About",
+  // },
 ];
 
 // export const footerLinks = [

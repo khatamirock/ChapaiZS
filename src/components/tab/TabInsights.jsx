@@ -7,7 +7,7 @@ import { AiFillHome } from "react-icons/ai";
 import { BiMessageSquareEdit } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import Info_editor from "../info_edit/Info_editor";
-
+import { SearchContext } from "../contexts/Context";
 function edit_infos(isTrue, showConfirmation, setShowConfirmation) {
   return (
     <m.div
@@ -16,6 +16,7 @@ function edit_infos(isTrue, showConfirmation, setShowConfirmation) {
       className="edit_Btn absolute top-0 left-0"
       onClick={() => {
         console.log("edit click");
+        setShowConfirmation(true);
         <Info_editor
           isVisible={showConfirmation}
           onClose={setShowConfirmation}
@@ -36,9 +37,11 @@ function shortCut_of_card(mem, idx, src, setCard, clicked) {
     const id = ids.split("id=")[1];
     url = src + id;
   }
+
   const [hoverEdit, sethoverEdit] = useState(false);
   const phone = String(mem.Phone);
   const [showConfirmation, setShowConfirmation] = useState(false);
+  // const [clickedOnSrch, setclickedOnSrch] = useState(1);
   // // Check if the phone number starts with "01" and add a "0" if it doesn't start with "01" or "+88".
   // if (!phone.startsWith("01") && !phone.startsWith("+88")) {
   //   phone = "0" + phone;
@@ -47,14 +50,20 @@ function shortCut_of_card(mem, idx, src, setCard, clicked) {
     <m.div
       whileHover={{ scale: 1.03 }}
       key={idx}
+      id={`mem-${idx + 1}`}
       className={`eachMem mt-4 pb-3 bg-fornery relative ${
         hoverEdit ? "hover" : "unhover"
       }`}
-      // onClick={() => {
-      //   setCard(idx);
-
-      //   console.log(idx);
-      // }}
+      onClick={() => {
+        console.log(currentSelect);
+        // const element = document.getElementById(`mem-${clickedOnSrch}`);
+        // console.log(clicked);
+        // if (element) {
+        //   element.scrollIntoView({
+        //     behavior: "smooth",
+        //   });
+        // }
+      }}
       onMouseEnter={() => {
         sethoverEdit(true);
       }}
@@ -62,6 +71,14 @@ function shortCut_of_card(mem, idx, src, setCard, clicked) {
         sethoverEdit(false);
       }}
     >
+      <>
+        {showConfirmation && (
+          <Info_editor
+            isVisible={showConfirmation}
+            onClose={setShowConfirmation}
+          />
+        )}
+      </>
       <> {edit_infos(hoverEdit, showConfirmation, setShowConfirmation)} </>
       <div className="blood_grp absolute top-0 right-0">{mem.Blood_Group} </div>
       <div className="mem_info mt-[12px]">
@@ -75,14 +92,25 @@ function shortCut_of_card(mem, idx, src, setCard, clicked) {
     </m.div>
   );
 }
+// for all users
+const Tab1 = ({}) => {
+  const [currentSelect, setDataFromSession] = useState("");
+  const { clickedOnSrch, setClickedOnSrch } = SearchContext();
+  useEffect(() => {
+    // console.log("data__CHANGED!!!!!!!!>>>>>>>>>", clickedOnSrch);
+    const element = document.getElementById(`mem-${clickedOnSrch}`);
 
-const Tab1 = () => {
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [clickedOnSrch]);
+  // console.log(highlightUser);
   return (
     <div className="containerMem grid-cols-1  sm:ml-[20%] sm:mr-[20%] ml-4 mr-4">
       {Zillasom.map((mem, idx) => {
         return (
           <div to={`/user/${idx + 1}`}>
-            {shortCut_of_card(mem, idx, null, null)}
+            {shortCut_of_card(mem, idx, null, null, currentSelect)}
           </div>
           // <div to={`/user/${idx + 1}`}>{shortCut_of_card(mem, idx, null, null)}</Link>
         );
@@ -90,6 +118,8 @@ const Tab1 = () => {
     </div>
   );
 };
+
+// for commette members
 const Tab2 = () => {
   let baseDriveUrl = "https://drive.google.com/uc?export=view&id=";
   const [zillbase, setZillbase] = useState([]);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Zillasom } from "../assets/CSV/zilla";
-
+import "./search.css";
+import { SearchContext } from "../components/contexts/Context";
 const SearchTest = () => {
   const searchData = Zillasom;
   const [searchSeries, setSearchSeries] = useState("");
@@ -60,7 +61,8 @@ const SearchTest = () => {
     </div>
   );
 };
-export const SearchTest3 = ({ Series }) => {
+export const SearchTest3 = ({ Series, select, curr }) => {
+  const { clickedOnSrch, setClickedOnSrch } = SearchContext();
   const searchData = Zillasom;
   if (Series === null) {
     return null; // or handle the null value appropriately
@@ -72,17 +74,26 @@ export const SearchTest3 = ({ Series }) => {
       seriesMatch = item.Series.toString().includes(Series);
     } catch (error) {
       // Handle the exception (e.g., log an error, provide a default value, etc.)
-      console.error("An error occurred while processing Series:", error);
     }
 
     return seriesMatch;
   });
 
-  console.log(Series, filteredData);
+  // console.log(Series, filteredData);
   return (
     <div className="names">
       {filteredData.map((item, index) => (
-        <h1 className="searched_date text-white p-2">{item.Name}</h1>
+        <h1
+          className="searched_date text-white p-2"
+          onClick={() => {
+            // console.log(index, item.id);
+            setClickedOnSrch(item.id);
+
+            // window.sessionStorage.setItem("selected", item.id);
+          }}
+        >
+          {item.Name} - {item.Series}
+        </h1>
       ))}
     </div>
   );
